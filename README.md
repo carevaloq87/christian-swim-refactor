@@ -14,6 +14,8 @@ This is the proposed diagram that the refactored code will follow from now on:
 
 ## Test Diagram
 
+You can find the proposed/used diagram in the path directory `db`
+
 ![Test Diagram](https://github.com/carevaloq87/christian-swim-refactor/blob/master/db/diagram.png "Test Diagram")
 
 ## Creation of routes for the given scenario
@@ -63,3 +65,5 @@ The created interface is called `UsersController` and includes the following met
 The version of Laravel used was 5.8, it was deployed using WAMP for windows, seeders for users were implemented and used, the tests were made in Postman.
 
 If the tester wants to test the scenario without verifying CSRF an `except` rule should be added in variable `protected $except` located in the file `\app\Http\Middleware\VerifyCsrfToken.php`, the rule should be `'v1/users/*'`, this is not intended to be used in production as is considered as a bad practice instead you can use the method `@csrf` in blade or the method `csrf_token()` to generate a CSRF-Token.
+
+Is assumed that only the files and directories contained in the test should be copied in the equivalent project directory of the person who test the code.
