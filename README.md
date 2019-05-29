@@ -57,3 +57,9 @@ The created interface is called `UsersController` and includes the following met
 `pets` display all the Pets fot a given User including it's favorite foods
 `store` creates a given User with the required fields and validates its content with the `getData` method, removing unnecessary parameters or controlling business rules.
 `destroy` deletes a given pet from a given user.
+
+## MISC
+
+The version of Laravel used was 5.8, it was deployed using WAMP for windows, seeders for users were implemented and used, the tests were made in Postman.
+
+If the tester wants to test the scenario without verifying CSRF an `except` rule shoud be added in variable `protected $except` located in the file `\app\Http\Middleware\VerifyCsrfToken.php`, the rule should be `'v1/users/*'`, this is not intended to be used in production as is considered as a bad practice instead you can use the method `@csrf` in blade or the method `csrf_token()` to generate a CSRF-Token.
