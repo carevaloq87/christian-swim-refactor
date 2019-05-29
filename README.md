@@ -43,3 +43,7 @@ The attribute `favourite_foods` was added to the model in order to get the most 
 Next, I'm indicating the relation of the Model Pet with the Model User, as in the given diagram one Pet belongs to a User.
 
 Finally,  I'm indicating the relation of the Model Pet with the Model PetFood.
+
+## Define and create the Pet Foods Model
+
+The idea of this model is to represent pet foods and it's contiditions, no relationship back to the model Pet was added as from the given scenario is not necessary.
