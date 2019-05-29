@@ -21,3 +21,16 @@ This is the proposed diagram that the refactored code will follow from now on:
 In this step I defined all the routes that the app should accept. Most of them remained the same including its parameters with the exception of the Delete route which was modified in order to identify all the variables it can handle and avoiding a potential error using same variable names on URLs.
 
 Also, all routes were grouped under the same prefix that seems to identfy the version of the app '/v1'.
+
+
+## Define and create the User Model
+
+The idea of this model is to represent a User and it's contiditions, there are a list of relevant factors that were included in order to improve the existing code:
+
+    The attribute `display_name` was added to the model in order to get the most of Laravel's accessors (the method used is `getDisplayNameAttribute` ) which retrieves the attribute on the given routes as is added on toJson() or toArray() methods or through a regular return of a controller in Laravel ie. `return $variable`.
+
+    The same logic applied to the attributes `login_date_formated`, `created_at_formated`, `updated_at_formated` but it also format dates as required `Y-m-d H:i:s`.
+
+    Next, I'm indicating the relation of the Model User with the Model Pet, as in the given diagram One User has many Pet, this method allow us to get all the Pets that belongs to a given User, this `belongsTo` relationship will be added to Pets as well.
+
+    Finally, the field `password` is hidden from any User invocation.
