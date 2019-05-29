@@ -14,7 +14,7 @@ This is the proposed diagram that the refactored code will follow from now on:
 
 ## Test Diagram
 
-You can find the proposed/used diagram in the path directory `db`
+You can find the proposed/used diagram in the directory `db`
 
 ![Test Diagram](https://github.com/carevaloq87/christian-swim-refactor/blob/master/db/diagram.png "Test Diagram")
 
