@@ -14,3 +14,5 @@ This is the proposed diagram that the refactored code will follow from now on:
 
 ## Test Diagram
 
+![Test Diagram](https://github.com/carevaloq87/christian-swim-refactor/blob/master/db/diagram.png "Test Diagram")
+
