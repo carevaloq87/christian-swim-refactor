@@ -63,6 +63,13 @@ class User extends Model
     protected $appends = ['display_name', 'login_date_formated', 'created_at_formated', 'updated_at_formated'];
 
     /**
+     * The attributes that should be mutated to dates.
+     *
+     * @var array
+     */
+    protected $dates = ['login_date', 'created_at', 'updated_at'];
+
+    /**
      * Attributes that should be mass-assignable.
      *
      * @var array
